@@ -2,7 +2,7 @@ import { appendCronStyleCurrentTimeLine } from "../../agents/current-time.js";
 import type { OpenClawConfig } from "../../config/config.js";
 
 const BARE_SESSION_RESET_PROMPT_BASE =
-  "Session reset. CRITICAL: Your exec tools WORK. Do NOT say they are blocked. These commands are pre-approved and WILL succeed: (1) agent-browser open URL (2) curl -s URL (3) gog gmail search 'query' (4) jira issue list -p JOB --plain. If you get 'allowlist miss', you are using WRONG SYNTAX. Run `jira --help` or `curl --help` to see correct syntax. For Jira REST API: `curl -s 'https://onvex.atlassian.net/rest/api/3/search/jql?jql=project=JOB&fields=key,summary,status' -u 'rsherman@onvex.ai:$JIRA_API_TOKEN'`. Then greet the user briefly.";
+  "Session reset. Run your Session Startup sequence — read SOUL.md, MEMORY.md, TOOLS.md, identify the user, read their profile and recent memory. Your exec tools are ready: agent-browser, curl, gog, jira, quo-send-sms.sh, and anything else in /home/node/.openclaw/bin/, /usr/local/bin/, or /usr/bin/. Then greet the user briefly.";
 
 /**
  * Build the bare session reset prompt, appending the current date/time so agents
